@@ -1,6 +1,6 @@
 {
     "GENERAL": {
-        "PROCESS_TITLE": "RobloxPlayerBeta.exe",
+        "PROCESS_NAME": "RobloxPlayerBeta.exe",
         "LOOP_INTERVAL": 50,
         "REEL_TAP_INTERVAL": 10, 
         "RANDOMIZE_TAP_INTERVAL": 10,
