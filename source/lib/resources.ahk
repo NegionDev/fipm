@@ -1,5 +1,5 @@
 ; main resources
-;@Ahk2Exe-AddResource ..\shared\schema\config.json schema\config.json
+;@Ahk2Exe-AddResource ..\shared\schema\config.json, schema\config.json
 
 ; gui resources
 ;@Ahk2Exe-AddResource lib\WebViewToo\32bit\WebView2Loader.dll, 32bit\WebView2Loader.dll
