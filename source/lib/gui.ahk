@@ -28,8 +28,3 @@ UpdateUIStatus(status) {
 UpdateUIStep(step_text) {
     return WV.ExecuteScriptAsync("document.querySelector('p#step-status').innerText = '" . step_text . "';")
 }
-
-;Resources for Compiled Scripts
-;@Ahk2Exe-AddResource lib\WebViewToo\32bit\WebView2Loader.dll, 32bit\WebView2Loader.dll
-;@Ahk2Exe-AddResource lib\WebViewToo\64bit\WebView2Loader.dll, 64bit\WebView2Loader.dll
-;@Ahk2Exe-AddResource view\index.html, view\index.html
