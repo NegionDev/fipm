@@ -1,5 +1,6 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
+#Include <resources>
 #Include <constants>
 #Include <gui>
 #Include <utils>
