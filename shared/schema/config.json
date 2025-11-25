@@ -1,0 +1,43 @@
+{
+    "GENERAL": {
+        "PROCESS_TITLE": "RobloxPlayerBeta.exe",
+        "LOOP_INTERVAL": 50,
+        "REEL_TAP_INTERVAL": 10, 
+        "RANDOMIZE_TAP_INTERVAL": 10,
+        "MINIMUM_CHARGE_HOLD": 150, 
+        "PRE_IDLE_DELAY": 600,
+        "PRE_REEL_DELAY": 100,
+        "STEP_TIMEOUT": 30000,
+        "DEBUG_MODE": true,
+        "HIDE_GUI_WHEN_ENABLED": true
+    },
+    "HOTKEYS": {
+        "RELOAD_MACRO": "!r",
+        "EXIT_MACRO": "!Esc",
+        "TOGGLE_FISHING": "!p"
+    },
+    "ROD_INDICATOR": {
+        "X": 0,
+        "Y": 0,
+        "W": 0,
+        "H": 0,
+        "COLOR_ID": "#FFCF3E",
+        "TOLERANCE": 5
+    },
+    "LUCK_INDICATOR": {
+        "X": 0,
+        "Y": 0,
+        "W": 0,
+        "H": 0,
+        "COLOR_ID": "#02FF02",
+        "TOLERANCE": 5
+    },
+    "REEL_INDICATOR": {
+        "X": 0,
+        "Y": 0,
+        "W": 0,
+        "H": 0,
+        "COLOR_ID": "#7F7F7F",
+        "TOLERANCE": 0
+    }
+}
