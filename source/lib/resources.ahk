@@ -7,3 +7,32 @@
 ;@Ahk2Exe-AddResource view\index.html, view\index.html
 ;@Ahk2Exe-AddResource view\js\script.js, view\js\script.js
 ;@Ahk2Exe-AddResource view\css\style.css, view\css\style.css
+
+if (A_IsCompiled) {
+    resources := [
+        (A_PtrSize * 8) . "bit\WebView2Loader.dll",
+        "schema\config.json",
+        "view\index.html",
+        "view\js\script.js",
+        "view\css\style.css"
+    ]
+
+    For resource in resources {
+        WebViewCtrl.CreateFileFromResource(resource, WebViewCtrl.TempDir)
+    }
+
+    OnExit(OnScriptExit)
+}
+
+OnScriptExit(reason, *) {
+    if (reason ~= "Reload|Single") {
+        return
+    }
+
+    if (DirExist(WebViewCtrl.TempDir)) {
+        try {
+            Sleep(500)
+            DirDelete(WebViewCtrl.TempDir, true)
+        }
+    }
+}

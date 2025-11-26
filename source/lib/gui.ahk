@@ -4,17 +4,25 @@
 
 WebViewSettings := {}
 if (A_IsCompiled) {
-    WebViewCtrl.CreateFileFromResource((A_PtrSize * 8) . "bit\WebView2Loader.dll", WebViewCtrl.TempDir)
     WebViewSettings := { DllPath: WebViewCtrl.TempDir . "\" . (A_PtrSize * 8) . "bit\WebView2Loader.dll" }
 }
 
 WV := WebViewGui("+Resize -Caption", , , WebViewSettings)
-if (!A_IsCompiled) {
+if (A_IsCompiled) {
+    host := "fipm.localhost"
+
+    WV.SetVirtualHostNameToFolderMapping(host, WebViewCtrl.TempDir . "\view", WebView2.HOST_RESOURCE_ACCESS_KIND.ALLOW)
+    WV.Navigate("http://" . host . "/index.html")
+} else {
     WV.AllowGlobalAccessFor("localhost")
+    WV.Navigate("http://localhost:5173/")
 }
 
-WV.OnEvent("Close", (*) => ExitApp())
-WV.Navigate(A_IsCompiled ? "view/index.html" : "http://localhost:5173/")
+WV.OnEvent("Close", (*) => (
+    WV.Hide()
+    ExitApp()
+))
+
 WV.Show("w800 h600")
 
 UpdateUIStatus(status) {

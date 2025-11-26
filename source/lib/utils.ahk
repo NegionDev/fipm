@@ -16,7 +16,7 @@ FileWrite(filename, text := "") {
 GetConfig() {
     static config := unset
     static lastModifiedTime := 0
-    DefaultConfigFilePath := A_IsCompiled ? A_ScriptDir . "\schema\config.json" : A_ScriptDir . "\..\shared\schema\config.json"
+    DefaultConfigFilePath := A_IsCompiled ? WebViewCtrl.TempDir . "\schema\config.json" : A_ScriptDir . "\..\shared\schema\config.json"
 
     try {
         if (!FileExist(CONFIG_FILE_PATH)) {
