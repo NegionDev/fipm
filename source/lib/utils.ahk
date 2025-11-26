@@ -9,7 +9,10 @@ Clamp(value, minimum, maximum) {
 
 ; Create a new file if it's doesn't exist, and overwrite the content if it's exist
 FileWrite(filename, text := "") {
-    return FileOpen(filename, "w").Write(text)
+    openedFile := FileOpen(filename, "w")
+
+    openedFile.Write(text)
+    return openedFile.Close()
 }
 
 ; Get configuration settings from json file
