@@ -4,16 +4,16 @@
   let {
     id,
     label,
-    minimum,
-    maximum,
     value = $bindable(),
+    minimum = 10,
+    maximum = 1000,
     className = "",
   }: {
     id: string;
     label: string;
-    minimum: number;
-    maximum: number;
     value: number;
+    minimum?: number;
+    maximum?: number;
     className?: string;
   } = $props();
 </script>

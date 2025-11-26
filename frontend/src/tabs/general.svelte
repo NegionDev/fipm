@@ -92,49 +92,37 @@
         <TimingSlider
           id="loop-interval"
           label="Loop Interval"
-          minimum={50}
-          maximum={1000}
           bind:value={configState.config.GENERAL.LOOP_INTERVAL}
         />
         <TimingSlider
           id="reel-tap-interval"
           label="Reel Tap Interval"
-          minimum={10}
-          maximum={500}
           bind:value={configState.config.GENERAL.REEL_TAP_INTERVAL}
         />
         <TimingSlider
           id="randomize-tap-interval"
           label="Randomize Tap Interval"
-          minimum={10}
-          maximum={100}
           bind:value={configState.config.GENERAL.RANDOMIZE_TAP_INTERVAL}
         />
         <TimingSlider
           id="minimum-charge-hold"
           label="Minimum Charge Hold"
-          minimum={150}
-          maximum={1000}
           bind:value={configState.config.GENERAL.MINIMUM_CHARGE_HOLD}
         />
         <TimingSlider
           id="pre-idle-delay"
           label="Pre-Idle Delay"
-          minimum={600}
-          maximum={1000}
           bind:value={configState.config.GENERAL.PRE_IDLE_DELAY}
         />
         <TimingSlider
           id="pre-reel-delay"
           label="Pre-Reel Delay"
-          minimum={100}
-          maximum={1000}
           bind:value={configState.config.GENERAL.PRE_REEL_DELAY}
         />
         <TimingSlider
           id="step-timeout"
           label="Step Timeout"
-          minimum={30_000}
+          minimum={10_000}
           maximum={60_000}
           bind:value={configState.config.GENERAL.STEP_TIMEOUT}
         />
