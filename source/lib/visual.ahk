@@ -1,6 +1,5 @@
 #Requires AutoHotkey v2.0
 #Include ShinsClass\ShinsOverlayClass.ahk
-#Include ShinsClass\ShinsImageScanClass.ahk
 #Include constants.ahk
 #Include utils.ahk
 
@@ -187,9 +186,14 @@ IndicatorSearch(indicator) {
         ; get the indicator rect
         rect := indicator.rect
 
+        ; get the indicator coordinates
+        startX := rect.x
+        startY := rect.y
+        endX := rect.x + rect.w
+        endY := rect.y + rect.h
+
         ; search the visual
-        scanner := ShinsImageScanClass(GetProcessName())
-        return scanner.PixelRegion(indicator.colorId, rect.x, rect.y, rect.w, rect.h, indicator.tolerance)
+        return PixelSearch(&fx, &fy, startX, startY, endX, endY, indicator.colorId, indicator.tolerance)
     } catch as err {
         throw err
     }

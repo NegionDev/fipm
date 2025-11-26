@@ -27,4 +27,3 @@ FIPM built with these awesome AutoHotkey libraries:
 - [cJson.ahk](https://github.com/G33kDude/cJson.ahk) – lightning-fast JSON parsing & stringifying
 - [WebViewToo](https://github.com/The-CoDingman/WebViewToo) – modern embedded browser for AHK v2
 - [ShinsOverlayClass](https://github.com/Spawnova/ShinsOverlayClass) - Create Direct2D overlays for in-game heads up information
-- [ShinsImageScanClass](https://github.com/Spawnova/ShinsImageScanClass) – More advanced image and pixel searching for AHK
