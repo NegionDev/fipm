@@ -38,7 +38,7 @@
     {
       id: "close",
       icon: () => X,
-      fn: async () => await window.ahk.global.ExitApp(),
+      fn: async () => await window.ahk.global.WinClose("A"),
     },
   ];
 
