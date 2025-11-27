@@ -41,7 +41,7 @@ Charging() {
             3
         )
 
-        if (detected && (A_TickCount - ChargeHoldTime) >= minimumChargeHold) {
+        if (detected && ((A_TickCount - ChargeHoldTime) >= minimumChargeHold)) {
             RandomClick("Up Left")
             global Step := "Waiting"
         } else {
@@ -83,7 +83,7 @@ Reeling() {
         )
 
         if (detected) {
-            reelTapInterval := config.Get("REEL_TAP_INTERVAL") + Random(0, config.Get("RANDOMIZE_TAP_INTERVAL"))
+            reelTapInterval := (config.Get("REEL_TAP_INTERVAL") + Random(0, config.Get("RANDOMIZE_TAP_INTERVAL")))
 
             RandomClick("Down Left")
             Sleep(reelTapInterval)
@@ -147,7 +147,7 @@ RunFishingStep() {
                 break
             }
 
-            if ((A_TickCount - startTime) >= config.Get("STEP_TIMEOUT")) {
+            if (((A_TickCount - startTime) >= config.Get("STEP_TIMEOUT"))) {
                 CleanUp()
                 Sleep(config.Get("PRE_IDLE_DELAY"))
                 ToggleFishing()
