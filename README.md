@@ -20,6 +20,8 @@ npm run build
 
 3. The generated assets will appear inside `source` directory as a new folder named `view`.
 
+4. Compile `main.ahk` file to `.exe` with [Ahk2Exe](https://github.com/AutoHotkey/Ahk2Exe)
+
 ## Credits
 
 FIPM built with these awesome AutoHotkey libraries:
