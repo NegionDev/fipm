@@ -8,7 +8,7 @@
         "PRE_IDLE_DELAY": 600,
         "PRE_REEL_DELAY": 100,
         "STEP_TIMEOUT": 30000,
-        "DEBUG_MODE": true,
+        "DEBUG_MODE": false,
         "HIDE_GUI_WHEN_ENABLED": true
     },
     "HOTKEYS": {
