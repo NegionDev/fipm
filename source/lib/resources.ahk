@@ -1,3 +1,6 @@
+#Requires AutoHotkey v2.0
+#Include WebViewToo\WebViewToo.ahk
+
 ; main resources
 ;@Ahk2Exe-AddResource ..\shared\schema\config.json, schema\config.json
 

@@ -1,5 +1,6 @@
 #Requires AutoHotkey v2.0
 #Include cJson\JSON.ahk
+#Include WebViewToo\WebViewToo.ahk
 #Include constants.ahk
 
 ; Limiting a value to a range between a minimum and a maximum value
