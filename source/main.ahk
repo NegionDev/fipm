@@ -147,7 +147,9 @@ RunFishingStep() {
                 break
             }
 
-            if (((A_TickCount - startTime) >= config.Get("STEP_TIMEOUT"))) {
+            stepTimeout := config.Get("STEP_TIMEOUT")
+            elapsedTime := (A_TickCount - startTime)
+            if ((elapsedTime >= stepTimeout)) {
                 CleanUp()
                 Sleep(config.Get("PRE_IDLE_DELAY"))
                 ToggleFishing()
@@ -155,7 +157,7 @@ RunFishingStep() {
             }
 
             DebugToolTip("Current Step: " . Step, 1)
-            DebugToolTip("Step Timeout: " . ParseMilliseconds(A_TickCount - startTime), 2)
+            DebugToolTip("Step Timeout: " . ParseMilliseconds(stepTimeout - elapsedTime), 2)
             UpdateUIStep(Step)
 
             %Step%()
